@@ -16,7 +16,7 @@ const Edit = ({
 
     useEffect(
         () => {
-            fetch(`http://localhost:8000/levels/${id}`, {
+            fetch(`http://localhost:8000/levels/${id}/`, {
                 mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,6 +65,7 @@ const Edit = ({
             headers: {
                 'Content-Type': 'application/json',
             },
+            body: JSON.stringify({ name, level_code: levelCode })
         }).then(() => {
             setRedirect(true);
         });
