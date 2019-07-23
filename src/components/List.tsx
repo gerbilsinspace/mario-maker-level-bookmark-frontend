@@ -30,17 +30,18 @@ const List = () => {
 
     return (
         <>
-            <div className={css`width: 50%; float: left;`}>
-                <h1>Levels</h1>
+            <div className={css`width: 70%; float: left;`}>
+                <h2>Levels</h2>
                 <ul>
                     {levels.map(({ name, levelCode, id }: LevelInterface) => (
                         <li key={name}>
-                            {name} - {levelCode} <Link to={`/${id}`}>Details</Link>
+                            <p>{name} - {levelCode}</p>
+                            <p><Link to={`/${id}`}>Details</Link></p>
                         </li>
                     ))}
                 </ul>
             </div>
-            <div className={css`width: 50%; float: left; text-align: right;`}><h2><Link to='/create'>Create New Level</Link></h2></div>
+            <div className={css`width: 30%; float: left; text-align: right;`}><h2><Link to='/create'>Create New Level</Link></h2></div>
         </>
     );
 };

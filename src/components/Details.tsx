@@ -48,7 +48,7 @@ const Details = ({ match: { params: { id } } }: MatchInterface) => {
 
     return (
         <div>
-            <h1>{name}</h1>
+            <h2>{name}</h2>
             <p>Name: {name}</p>
             <p>Level Code: {levelCode}</p>
             <p>

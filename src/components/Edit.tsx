@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
+import { css } from 'emotion';
 
 const Edit = ({
     match: {
@@ -73,18 +74,19 @@ const Edit = ({
 
     return (
         <div>
-            <h1>{name}</h1>
+            <h2>{name}</h2>
             <p>
-                <label htmlFor="name">Name: </label>
-                <input type="text" id="name" value={name} onChange={onNameChange} />
+                <label htmlFor="name" className={css`width: 100px; display: inline-block;`}>Name: </label>
+                <input type="text" id="name" value={name} onChange={onNameChange} className={css`width: 300px; padding: 5px; display: inline-block;`} />
             </p>
             <p>
-                <label htmlFor="levelCode">Level Code: </label>
+                <label htmlFor="levelCode" className={css`width: 100px; display: inline-block;`}>Level Code: </label>
                 <input
                     type="text"
                     id="levelCode"
                     value={levelCode}
                     onChange={onLevelCodeChange}
+                    className={css`width: 300px; padding: 5px; display: inline-block;`}
                 />
             </p>
             <p>

@@ -20,6 +20,8 @@ button {
     border: none;
     padding-top: 3px;
     margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 input {

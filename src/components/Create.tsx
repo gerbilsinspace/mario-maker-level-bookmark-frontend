@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
+import { css } from 'emotion';
 
 const Create = () => {
   const [name, setName] = useState('');
@@ -36,18 +37,19 @@ const Create = () => {
 
   return (
     <>
-      <h1>New Level</h1>
+      <h2>New Level</h2>
       <p>
-        <label htmlFor="name">Name: </label>
-        <input type="text" onChange={onNameChange} value={name} id="name" />
+        <label className={css`width: 100px; display: inline-block;`} htmlFor="name">Name: </label>
+        <input type="text" onChange={onNameChange} value={name} id="name" className={css`width: 300px; padding: 5px; display: inline-block;`} />
       </p>
       <p>
-        <label htmlFor="levelCode">Level Code: </label>
+        <label className={css`width: 100px; display: inline-block;`} htmlFor="levelCode">Level Code: </label>
         <input
           type="text"
           onChange={onLevelCodeChange}
           value={levelCode}
           id="levelCode"
+          className={css`width: 300px; padding: 5px; display: inline-block;`}
         />
       </p>
       <p>
