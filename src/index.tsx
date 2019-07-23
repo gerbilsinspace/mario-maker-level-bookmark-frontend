@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Typography from 'typography';
+
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import './index.css';
+
+const typography = new Typography({
+    bodyFontFamily: ['Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+});
+
+typography.injectStyles();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
