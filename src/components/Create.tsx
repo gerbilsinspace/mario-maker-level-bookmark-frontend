@@ -37,18 +37,22 @@ const Create = () => {
   return (
     <>
       <h1>New Level</h1>
-      <label htmlFor="name">Name: </label>
-      <input type="text" onChange={onNameChange} value={name} id="name" />
-      <br />
-      <label htmlFor="levelCode">Level Code: </label>
-      <input
-        type="text"
-        onChange={onLevelCodeChange}
-        value={levelCode}
-        id="levelCode"
-      />
-      <br />
-      <button onClick={onButtonClick}>Create Level</button>
+      <p>
+        <label htmlFor="name">Name: </label>
+        <input type="text" onChange={onNameChange} value={name} id="name" />
+      </p>
+      <p>
+        <label htmlFor="levelCode">Level Code: </label>
+        <input
+          type="text"
+          onChange={onLevelCodeChange}
+          value={levelCode}
+          id="levelCode"
+        />
+      </p>
+      <p>
+        <button onClick={onButtonClick}>Create Level</button>
+      </p>
     </>
   );
 };
