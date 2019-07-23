@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { url } from '../config';
 
 interface MatchInterface {
     match: {
@@ -16,7 +17,7 @@ const Details = ({ match: { params: { id } } }: MatchInterface) => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8000/levels/${id}`, {
+            fetch(`${url}/levels/${id}`, {
                 mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
@@ -48,7 +49,7 @@ const Details = ({ match: { params: { id } } }: MatchInterface) => {
 
     return (
         <div>
-            <h2>{name}</h2>
+            <h1>{name}</h1>
             <p>Name: {name}</p>
             <p>Level Code: {levelCode}</p>
             <p>

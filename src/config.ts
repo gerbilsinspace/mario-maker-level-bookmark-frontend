@@ -1,0 +1,1 @@
+export const url = process.env.REACT_APP_MM2_BACKEND_URL || 'http://localhost:8000';

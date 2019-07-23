@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { css } from 'emotion';
-
+import { url } from '../config';
 const Edit = ({
     match: {
         params: { id },
@@ -17,7 +17,7 @@ const Edit = ({
 
     useEffect(
         () => {
-            fetch(`http://localhost:8000/levels/${id}/`, {
+            fetch(`${url}/levels/${id}/`, {
                 mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const Edit = ({
     };
 
     const onEditClick = () => {
-        fetch(`http://localhost:8000/levels/${id}/`, {
+        fetch(`${url}/levels/${id}/`, {
             method: 'PUT',
             mode: 'cors',
             headers: {

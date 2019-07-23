@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Redirect, Link } from 'react-router-dom';
+import { url } from '../config';
 
 const Delete = ({
     match: {
@@ -12,7 +13,7 @@ const Delete = ({
     const [deleted, setDeleted] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:8000/levels/${id}`, {
+        fetch(`${url}/levels/${id}`, {
             mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
@@ -23,7 +24,7 @@ const Delete = ({
     }, [id]);
 
     const onDeleteClick = () => {
-        fetch(`http://localhost:8000/levels/${id}`, {
+        fetch(`${url}/levels/${id}`, {
             method: 'DELETE',
             mode: 'cors',
             headers: {

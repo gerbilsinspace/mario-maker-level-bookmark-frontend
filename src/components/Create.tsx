@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { css } from 'emotion';
+import { url } from '../config';
 
 const Create = () => {
   const [name, setName] = useState('');
@@ -16,7 +17,7 @@ const Create = () => {
   };
 
   const onButtonClick = () => {
-    fetch('http://localhost:8000/levels/', {
+    fetch(`${url}/levels/`, {
       method: 'POST',
       mode: 'cors',
       headers: {
